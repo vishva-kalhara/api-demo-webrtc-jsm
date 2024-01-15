@@ -13,24 +13,24 @@ const io = require("socket.io")(server, {
 
 app.use(cors());
 
-app.use(function (req, res, next) {
-    // res.header(
-    //     "Access-Control-Allow-Origin",
-    //     "https://www.differentServerDomain.fr https://www.differentServerDomain.fr"
-    // );
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-});
+// app.use(function (req, res, next) {
+//     // res.header(
+//     //     "Access-Control-Allow-Origin",
+//     //     "https://www.differentServerDomain.fr https://www.differentServerDomain.fr"
+//     // );
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept"
+//     );
+//     next();
+// });
 
 const PORT = 5000;
 
 app.get("/", (req, res) => {
     res.status(200).json({
         status: "success",
-        message: "Response From Root updated 17.54",
+        message: "Response From Root updated 19:17",
     });
 });
 

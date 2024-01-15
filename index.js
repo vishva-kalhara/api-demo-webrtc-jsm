@@ -8,6 +8,7 @@ const io = require("socket.io")(server, {
         origin: "*",
         methods: ["GET", "POST"],
     },
+    transports: ["websocket", "polling", "flashsocket"],
 });
 
 app.use(cors());
@@ -17,7 +18,7 @@ const PORT = 5000;
 app.get("/", (req, res) => {
     res.status(200).json({
         status: "success",
-        message: "Response From Root UPdated",
+        message: "Response From Root updated 17.36",
     });
 });
 
